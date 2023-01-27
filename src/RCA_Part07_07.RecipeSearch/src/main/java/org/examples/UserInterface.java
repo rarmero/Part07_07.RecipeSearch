@@ -16,11 +16,7 @@ public class UserInterface {
     }
 
     public ArrayList<Recipe> start(String file) {
-     //   System.out.println("File to read:");
-     //   file = scan.nextLine();
 
-    //    System.out.println("Commands:\nlist - lists the recipes\nstop - stops the program\nfind name - searches recipes by name\n" +
-     //   "find cooking time - searches recipes by cooking time\nfind ingredient - searches recipes by ingredient\n");
 
             try (Scanner fileReader = new Scanner(Paths.get(file))) {
                 

@@ -1,13 +1,14 @@
 package org.examples;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Recipe {
     private String name;
     private int time;
-    private ArrayList<String> ingredients;
+    private List<String> ingredients;
 
-    public Recipe(String name, int time, ArrayList<String> ingredients) {
+    public Recipe(String name, int time, List<String> ingredients) {
         this.name = name;
         this.time = time;
         this.ingredients = ingredients;
@@ -48,7 +49,7 @@ public class Recipe {
         this.ingredients.add(ingredient);
     }
 
-    public ArrayList<String> getIngredients() {
+    public List<String> getIngredients() {
         return this.ingredients;
     }
 

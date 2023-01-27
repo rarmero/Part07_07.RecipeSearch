@@ -10,7 +10,11 @@ public class RecipeSearch {
         UserInterface userInterface = new UserInterface(scanner);
 
         ArrayList<Recipe> recipeBook = userInterface.start("recipes.txt");
-        
+
+       System.out.println("Commands:\nlist - lists the recipes\nstop - stops the program\nfind name - searches recipes by name\n" +
+       "find cooking time - searches recipes by cooking time\nfind ingredient - searches recipes by ingredient\n");
+
+
         while(true) {
             System.out.println("Enter command:");
             String command = scanner.nextLine();
