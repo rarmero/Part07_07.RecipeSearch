@@ -5,10 +5,7 @@ Versions about Part07_07.RecipeSearch from [Mooc java 1 helsinki](https://java-p
 
 [Part07_07.RecipeSearch](https://java-programming.mooc.fi/part-7/3-larger-exercises)
 
-:::{.callout-note  collapse="false" }
-
 ##  Recipe Search MOOC
 
 ![fig 1](recipeSearch.PNG)
 
-:::
