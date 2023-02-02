@@ -7,5 +7,5 @@ Versions about Part07_07.RecipeSearch from [Mooc java 1 helsinki](https://java-p
 
 ##  Recipe Search MOOC
 
-![fig 1](recipeSearch.PNG)
+![fig 1](web\recipeSearch.PNG)
 
