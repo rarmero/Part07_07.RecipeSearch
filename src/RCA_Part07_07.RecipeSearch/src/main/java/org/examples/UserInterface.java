@@ -1,5 +1,8 @@
 package org.examples;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +11,9 @@ import java.util.Scanner;
 public class UserInterface {
     private Scanner scan;
     private ArrayList<Recipe> recipeBook;
+
+    private static final Logger logger = LogManager.getLogger("HelloWorld");
+
 
     public UserInterface(Scanner scan) {
         this.scan = scan;
@@ -64,7 +70,7 @@ public class UserInterface {
                 return recipeBook;
 
             } catch (Exception e) {
-                System.out.println("Couldn't read file " + e.getMessage());
+                logger.debug("Couldn't read file " + e.getMessage());
                 return recipeBook;
             }
     }
