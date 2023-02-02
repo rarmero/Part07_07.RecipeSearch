@@ -1,5 +1,8 @@
 package org.examples;
 
+import org.examples.model.Recipe;
+import org.examples.utils.showMessage;
+
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -16,7 +19,7 @@ public class RecipeSearch {
 
 
         while(true) {
-            System.out.println("Enter command:");
+            showMessage.showConsoleMessage("Enter command:");
             String command = scanner.nextLine();
 
             if (command.equals("stop")) {
@@ -25,14 +28,14 @@ public class RecipeSearch {
 
             if (command.equals("list")) {
                 for (Recipe toPrint : recipeBook) {
-                    System.out.println(toPrint);
+                    showMessage.showConsoleMessage(toPrint.toString());
                 }
             }
 
             if (command.equals("find name")) {
-                System.out.println("Searched word:");
+                showMessage.showConsoleMessage("Searched word:");
                 String word = scanner.nextLine();
-                System.out.println("Recipes:");
+                showMessage.showConsoleMessage("Recipes:");
                 for (Recipe toPrint : recipeBook) {
                     if (toPrint.getName().contains(word)) {
                         System.out.println(toPrint);
@@ -41,23 +44,23 @@ public class RecipeSearch {
             }
 
             if (command.equals("find cooking time")) {
-                System.out.println("Max cooking time: ");
+                showMessage.showConsoleMessage("Max cooking time: ");
                 int maxTime = Integer.valueOf(scanner.nextLine());
-                System.out.println("Recipes:");
+                showMessage.showConsoleMessage("Recipes:");
                 for (Recipe toPrint : recipeBook) {
                     if (toPrint.getTime() <= maxTime) {
-                        System.out.println(toPrint);
+                        showMessage.showConsoleMessage(toPrint.toString());
                     }
                 }
             }
 
             if (command.equals("find ingredient")) {
-                System.out.println("Ingredient: ");
+                showMessage.showConsoleMessage("Ingredient: ");
                 String ingredientSearched = scanner.nextLine();
-                System.out.println("Recipes:");
+                showMessage.showConsoleMessage("Recipes:");
                 for (Recipe toPrint : recipeBook) {
                     if (toPrint.getIngredients().contains(ingredientSearched)) {
-                        System.out.println(toPrint);
+                        showMessage.showConsoleMessage(toPrint.toString());
                     }
                     
                 }

@@ -2,6 +2,7 @@ package org.examples;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.examples.model.Recipe;
 
 import java.nio.file.Paths;
 import java.util.ArrayList;
