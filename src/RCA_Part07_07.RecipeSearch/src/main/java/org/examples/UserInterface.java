@@ -10,9 +10,8 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-    private Scanner scan;
-    private ArrayList<Recipe> recipeBook;
-
+    private final ArrayList<Recipe> recipeBook;
+    private final Scanner scan;
     private static final Logger logger = LogManager.getLogger("HelloWorld");
 
 
@@ -22,7 +21,7 @@ public class UserInterface {
 
     }
 
-    public ArrayList<Recipe> start(String file) {
+    public List<Recipe> start(String file) {
 
 
             try (Scanner fileReader = new Scanner(Paths.get(file))) {
@@ -39,7 +38,7 @@ public class UserInterface {
                         name = line;
                     }
                     if (linePos == 1) {
-                        time = Integer.valueOf(line);
+                        time = Integer.parseInt(line);
                     }
                     if (linePos > 1 && !line.isEmpty()) {
                         ingredients.add(line);
@@ -71,7 +70,7 @@ public class UserInterface {
                 return recipeBook;
 
             } catch (Exception e) {
-                logger.debug("Couldn't read file " + e.getMessage());
+                logger.debug(String.format("Couldn't read file %s", e.getMessage()));
                 return recipeBook;
             }
     }

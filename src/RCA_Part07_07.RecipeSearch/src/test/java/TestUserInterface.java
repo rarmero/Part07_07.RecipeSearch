@@ -61,7 +61,7 @@ public class TestUserInterface {
         Scanner scanner = new Scanner(System.in);
         UserInterface userInterface = new UserInterface(scanner);
 
-        ArrayList<Recipe> recipeBook = userInterface.start("recipes.txt");
+        List<Recipe> recipeBook = userInterface.start("recipes.txt");
 
         assertEquals(4,recipeBook.size());
 /*
